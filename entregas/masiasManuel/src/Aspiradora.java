@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class Aspiradora {
@@ -5,16 +6,19 @@ public class Aspiradora {
     public static void main(String[] args) {
 
         int[][] superficie = {
-                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
         };
+        int prueba;
+        int prueba2;
+        
 
-        int[] posicionAspiradora = { 4, 4 };
+        int[] posicionAspiradora = {4, 4};
 
         ensuciarEscenario(superficie);
         boolean hayQueLimpiar = estaSucia(superficie);;
@@ -28,12 +32,12 @@ public class Aspiradora {
         } while (hayQueLimpiar);
     }
 
-    static boolean estaSucia(int[][] superficie){
+    static boolean estaSucia(int[][] superficie) {
         for (int i = 0; i < superficie.length; i++) {
             for (int j = 0; j < superficie[i].length; j++) {
-                 if(superficie[i][j]>0){
-                     return true;   
-                 }
+                if (superficie[i][j] > 0) {
+                    return true;
+                }
             }
         }
         return false;
@@ -111,11 +115,11 @@ public class Aspiradora {
     static String mapear(int tile) {
 
         String[] estadosSuciedad = {
-                " . ",
-                "...",
-                "ooo",
-                "OOO",
-                "***"
+            " . ",
+            "...",
+            "ooo",
+            "OOO",
+            "***"
         };
         return estadosSuciedad[tile];
     }
